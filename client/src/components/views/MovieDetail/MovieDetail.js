@@ -4,6 +4,7 @@ import { API_URL, API_KEY, IMAGE_BASE_URL } from "../../Config";
 import MainImage from "../commons/MainImage";
 import GridCards from "../commons/GridCards";
 import MovieInfo from "./Sections/MovieInfo";
+import Favorite from "./Sections/Favorite";
 
 function MovieDetail(props) {
   let movieId = props.match.params.movieId;
@@ -38,6 +39,14 @@ function MovieDetail(props) {
         text={Movie.overview}
       />
       <div className="movie_info" style={{ width: "85%", margin: "1rem auto" }}>
+        <div style={{ display: "flex", justifyContent: "flex-end" }}>
+          <Favorite
+            movieInfo={Movie}
+            movieId={movieId}
+            userFrom={localStorage.getItem("userId")}
+          />
+        </div>
+
         <MovieInfo movie={Movie} />
         <br />
         <div
