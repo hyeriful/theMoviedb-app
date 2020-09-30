@@ -10,12 +10,9 @@ const { Title } = Typography;
 function LoginPage(props) {
   const dispatch = useDispatch();
 
-  //react hook 사용
-  //[현재 상태, Setter함수]
-  const [Email, setEmail] = useState(""); //초기값 빈 문자열로 세팅
+  const [Email, setEmail] = useState("");
   const [Password, setPassword] = useState("");
 
-  //타이핑을 할 때 onChange라는 이벤를 발생시켜서 state를 바꿔준다 -> state이 바뀌면 value가 바뀐다
   const onEmailHandler = (event) => {
     setEmail(event.currentTarget.value);
   };
@@ -37,7 +34,8 @@ function LoginPage(props) {
     dispatch(loginUser(body)) //dispatch(action이름)
       .then((response) => {
         if (response.payload.loginSuccess) {
-          props.history.push("/"); // 리액트에서 페이지 이동 시키는 방법
+          // window.localStorage.setItem("userId", response.payload.userId); //localStorage에 userId 저장해두기
+          props.history.push("/");
         } else {
           alert("Error");
         }
