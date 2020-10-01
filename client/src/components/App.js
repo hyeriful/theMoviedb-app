@@ -5,6 +5,7 @@ import LandingPage from "./views/LandingPage/LandingPage";
 import LoginPage from "./views/LoginPage/LoginPage";
 import RegisterPage from "./views/RegisterPage/RegisterPage";
 import MovieDetail from "./views/MovieDetail/MovieDetail";
+import FavoritePage from "./views/FavoritePage/FavoritePage";
 import Footer from "./views/Footer/Footer";
 import NavBar from "./views/NavBar/NavBar";
 import Auth from "../hoc/auth"; //hoc안에 다른 컴포넌트를 넣어주는 방법
@@ -19,6 +20,7 @@ function App() {
           <Route exact path="/login" component={Auth(LoginPage, false)} />
           <Route exact path="/register" component={Auth(RegisterPage, false)} />
           <Route path="/movie/:movieId" component={Auth(MovieDetail, null)} />
+          <Route path="/favorite" component={Auth(FavoritePage, true)} />
         </Switch>
       </div>
       <Footer />
