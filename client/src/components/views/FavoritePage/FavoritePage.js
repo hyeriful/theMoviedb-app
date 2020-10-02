@@ -10,28 +10,24 @@ function FavoritePage() {
   const [FavoriteList, setFavoriteList] = useState([]);
 
   useEffect(() => {
+    fetchFavoriteMovies();
+  }, []);
+
+  const fetchFavoriteMovies = () => {
     Axios.get(`${FAVORITE_SERVER}/getFavoriteMovie`).then((res) => {
       if (res.data.success) {
-        console.log(res.data.favorites);
         setFavoriteList(res.data.favorites);
       } else {
         alert("좋아하는 영화 목록을 가져오는데 실패했습니다.");
       }
     });
-  }, []);
-
-  useEffect(() => {
-    console.log();
-  }, [FavoriteList]);
+  };
 
   const onClickDelete = (movieId) => {
-    Axios.get(`${FAVORITE_SERVER}/removeFromFavorite/${movieId}`).then(
+    Axios.delete(`${FAVORITE_SERVER}/removeFromFavorite/${movieId}`).then(
       (res) => {
         if (res.data.success) {
-          let idx = FavoriteList.findIndex((elem) => {
-            return elem.movieId == movieId;
-          });
-          setFavoriteList(FavoriteList.splice(idx, 1));
+          fetchFavoriteMovies();
         } else {
           alert("리스트에서 지우는데 실패했습니다.");
         }
@@ -39,7 +35,7 @@ function FavoritePage() {
     );
   };
 
-  const renderImage = FavoriteList.map((fav, index) => {
+  const renderLists = FavoriteList.map((fav, index) => {
     const hoverContent = (
       <div>
         {fav.moviePost ? (
@@ -78,7 +74,7 @@ function FavoritePage() {
               <td>Remove from favorites</td>
             </tr>
           </thead>
-          <tbody>{renderImage}</tbody>
+          <tbody>{renderLists}</tbody>
         </table>
       </div>
     </div>
