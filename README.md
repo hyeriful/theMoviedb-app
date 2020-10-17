@@ -7,7 +7,7 @@ DB: mongoDB</p>
 <h4>ScreenShot</h4>
 <p>Differences in the navigation bar between logged-in and non-logged users.</p>
 <p>
-<img src="https://user-images.githubusercontent.com/55703132/96332109-3cbf1e00-109d-11eb-9591-7ac321ad724d.JPG" width=450 title="guestMode-MainPage" alt="guestMode-MainPage" />&emsp;&emsp;&emsp;<img src="https://user-images.githubusercontent.com/55703132/96332311-29f91900-109e-11eb-98a4-206481a5c6df.JPG" width=450 title="userMode-MainPage" alt="userMode-MainPage" />
+<img src="https://user-images.githubusercontent.com/55703132/96332109-3cbf1e00-109d-11eb-9591-7ac321ad724d.JPG" width=430 title="guestMode-MainPage" alt="guestMode-MainPage" />&emsp;&emsp;&emsp;<img src="https://user-images.githubusercontent.com/55703132/96332311-29f91900-109e-11eb-98a4-206481a5c6df.JPG" width=430 title="userMode-MainPage" alt="userMode-MainPage" />
   </p>
 </br>
 <p>Continue to fetch the list of movies via the Load More button on the main page.</p>
