@@ -5,6 +5,10 @@
 DB: mongoDB</p>
 </br>
 <h4>ScreenShot</h4>
+<p>Sign-up and Sign-in</p>
+<img src="https://user-images.githubusercontent.com/55703132/96333051-9a099e00-10a2-11eb-9a12-1c9d27c1dabc.JPG" width=500 title="SignUp" alt="SignUpPage"/>
+<img src="https://user-images.githubusercontent.com/55703132/96333063-b3aae580-10a2-11eb-958d-7c53f7778456.JPG" width=500 title="SignIn" alt="SignInPage"/>
+</br>
 <p>Differences in the navigation bar between logged-in and non-logged users.</p>
 <img src="https://user-images.githubusercontent.com/55703132/96332109-3cbf1e00-109d-11eb-9591-7ac321ad724d.JPG" width=500 title="guestMode-MainPage" alt="guestMode-MainPage" />&emsp;&emsp;&emsp;<img src="https://user-images.githubusercontent.com/55703132/96332311-29f91900-109e-11eb-98a4-206481a5c6df.JPG" width=500 title="userMode-MainPage" alt="userMode-MainPage" />
 </br>
