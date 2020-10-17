@@ -17,9 +17,11 @@ router.get("/check/:movieId", auth, (req, res) => {
       if (err) return res.status(400).send(err);
 
       let result = false;
-      if (info.length !== 0) return (resul = true);
+      if (info.length !== 0) {
+        result = true;
+      }
 
-      res.status(200).json({ success: true, isFavorite: info.length });
+      res.status(200).json({ success: true, isFavorite: result });
     }
   );
 });

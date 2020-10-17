@@ -39,7 +39,7 @@ function Favorite(props) {
 
   const onClickFavorite = () => {
     if (IsFavorite) {
-      Axios.get(`${FAVORITE_SERVER}/removeFromFavorite/${movieId}`).then(
+      Axios.delete(`${FAVORITE_SERVER}/removeFromFavorite/${movieId}`).then(
         (res) => {
           if (res.data.success) {
             setFavoriteNumber(FavoriteNumber - 1);
